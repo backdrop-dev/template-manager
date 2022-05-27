@@ -13,7 +13,7 @@
  */
 namespace Benlumia007\Backdrop\Template\Manager;
 use Benlumia007\Backdrop\Tools\Collection;
-use function Benlumia007\Backdrop\Template\path;
+use function Benlumia007\Backdrop\Template\Helpers\path;
 
 /**
  * Template collection class.
