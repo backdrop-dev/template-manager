@@ -13,12 +13,12 @@
 
 namespace Benlumia007\Backdrop\Template\Manager;
 use Benlumia007\Backdrop\Template\Manager\Component;
-use Benlumia007\Backdrop\Tools\ServiceProvider;
+use Benlumia007\Backdrop\Support\ServiceProvider;
 
 /**
  * Object templates provider class.
  *
- * @since  3.0.0
+ * @since  1.0.0
  * @access public
  */
 class Provider extends ServiceProvider {
@@ -26,7 +26,7 @@ class Provider extends ServiceProvider {
 	/**
 	 * Registers the templates collection and manager.
 	 *
-	 * @since  3.0.0
+	 * @since  1.0.0
 	 * @access public
 	 * @return void
 	 */
@@ -40,7 +40,7 @@ class Provider extends ServiceProvider {
 	/**
 	 * Boots the manager by firing its hooks in the `boot()` method.
 	 *
-	 * @since  3.0.0
+	 * @since  1.0.0
 	 * @access public
 	 * @return void
 	 */
