@@ -50,7 +50,7 @@ class Component implements Bootable {
 	 * @access public
 	 * @return void
 	 */
-	public function boot() {
+	public function boot() : void {
 
 		// Add registration callback.
 		add_action( 'init', [ $this, 'register' ], 95 );
