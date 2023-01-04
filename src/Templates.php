@@ -11,9 +11,9 @@
 /**
  * Define namespace
  */
-namespace Benlumia007\Backdrop\Template\Manager;
-use Benlumia007\Backdrop\Tools\Collection;
-use function Benlumia007\Backdrop\Template\Helpers\path;
+namespace Backdrop\Template\Manager;
+use Backdrop\Tools\Collection;
+use function Backdrop\Template\Helpers\path;
 
 /**
  * Template collection class.

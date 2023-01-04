@@ -11,8 +11,8 @@
 /**
  * Define namespace
  */
-namespace Benlumia007\Backdrop\Template\Manager;
-use Benlumia007\Backdrop\Contracts\Bootable;
+namespace Backdrop\Template\Manager;
+use Backdrop\Contracts\Bootable;
 
 /**
  * Template interface.

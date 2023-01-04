@@ -11,9 +11,9 @@
  * @license   https://www.gnu.org/licenses/gpl-2.0.html
  */
 
-namespace Benlumia007\Backdrop\Template\Manager;
-use Benlumia007\Backdrop\Template\Manager\Component;
-use Benlumia007\Backdrop\Support\ServiceProvider;
+namespace Backdrop\Template\Manager;
+use Backdrop\Template\Manager\Component;
+use Backdrop\Core\ServiceProvider;
 
 /**
  * Object templates provider class.

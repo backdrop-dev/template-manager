@@ -15,8 +15,8 @@
 /**
  * Define namespace
  */
-namespace Benlumia007\Backdrop\Template\Manager;
-use Benlumia007\Backdrop\Template\Manager\Contracts\Template as TemplateContract;
+namespace Backdrop\Template\Manager;
+use Backdrop\Template\Manager\Contracts\Template as TemplateContract;
 
 /**
  * Creates a new object template.

@@ -14,8 +14,8 @@
  * @since  1.0.0
  * @access public
  */
-namespace Benlumia007\Backdrop\Template\Manager\Contracts;
-use Benlumia007\Backdrop\Contracts\Bootable;
+namespace Backdrop\Template\Manager\Contracts;
+use Backdrop\Contracts\Bootable;
 
 /**
  * Template interface.
