@@ -5,10 +5,11 @@
  * This is the service provider for the object templates system, which binds an
  * empty collection to the container that can later be used to register templates.
  *
- * @package   Backdrop Core
- * @copyright Copyright (C) 2019-2021. Benjamin Lu
- * @author    Benjamin Lu ( https://getbenonit.com )
+ * @package   Backdrop
+ * @author    Benjamin Lu <benlumia007@gmail.com>
+ * @copyright 2019-2023. Benjamin Lu
  * @license   https://www.gnu.org/licenses/gpl-2.0.html
+ * @link      https://github.com/benlumia007/backdrop-template-manager
  */
 
 namespace Backdrop\Template\Manager;
@@ -33,8 +34,6 @@ class Provider extends ServiceProvider {
 	public function register() {
 
 		$this->app->singleton( Component::class );
-
-		$this->app->alias( Component::class, 'template/manager' );
 	}
 
 	/**
@@ -46,6 +45,6 @@ class Provider extends ServiceProvider {
 	 */
 	public function boot() : void {
 
-		$this->app->resolve( 'template/manager' )->boot();
+		$this->app->resolve( Component::class )->boot();
 	}
 }

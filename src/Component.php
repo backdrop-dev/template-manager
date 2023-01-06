@@ -1,11 +1,15 @@
 <?php
 /**
- * Backdrop Core ( src/Template/Template/Component.php )
+ * Template component class.
  *
- * @package   Backdrop Core
- * @copyright Copyright (C) 2019-2021. Benjamin Lu
- * @author    Benjamin Lu ( https://getbenonit.com )
+ * This class is used to boot the template component and handle its action and
+ * filter hooks.
+ *
+ * @package   Backdrop
+ * @author    Benjamin Lu <benlumia007@gmail.com>
+ * @copyright 2019-2023. Benjamin Lu
  * @license   https://www.gnu.org/licenses/gpl-2.0.html
+ * @link      https://github.com/benlumia007/backdrop-template-manager
  */
 
 /**

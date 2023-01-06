@@ -1,11 +1,16 @@
 <?php
 /**
- * Backdrop Core ( src/Template/Template/Templates.php )
+ * Templates manager.
  *
- * @package   Backdrop Core
- * @copyright Copyright (C) 2019-2021. Benjamin Lu
- * @author    Benjamin Lu ( https://getbenonit.com )
+ * This class is just a wrapper around the `Collection` class for adding a
+ * specific type of data.  Essentially, we make sure that anything added to the
+ * collection is in fact a `Template`.
+ *
+ * @package   Backdrop
+ * @author    Benjamin Lu <benlumia007@gmail.com>
+ * @copyright 2019-2023. Benjamin Lu
  * @license   https://www.gnu.org/licenses/gpl-2.0.html
+ * @link      https://github.com/benlumia007/backdrop-template-manager
  */
 
 /**

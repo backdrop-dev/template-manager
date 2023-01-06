@@ -6,10 +6,11 @@
  * `term`, and `user`.  When viewing a particular single post, term archive, or
  * user/author archive page, the template can be used.
  *
- * @package   Backdrop Core
- * @copyright Copyright (C) 2019-2021. Benjamin Lu
- * @author    Benjamin Lu ( https://getbenonit.com )
+ * @package   Backdrop
+ * @author    Benjamin Lu <benlumia007@gmail.com>
+ * @copyright 2019-2023. Benjamin Lu
  * @license   https://www.gnu.org/licenses/gpl-2.0.html
+ * @link      https://github.com/benlumia007/backdrop-template-manager
  */
 
 /**
