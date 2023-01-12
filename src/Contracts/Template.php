@@ -18,7 +18,6 @@
  * @access public
  */
 namespace Backdrop\Template\Manager\Contracts;
-use Backdrop\Contracts\Bootable;
 
 /**
  * Template interface.
@@ -34,7 +33,7 @@ interface Template {
 	 * @access public
 	 * @return string
 	 */
-	public function filename();
+	public function filename(): string;
 
 	/**
 	 * Returns the internationalized text label for the template.
@@ -43,7 +42,7 @@ interface Template {
 	 * @access public
 	 * @return string
 	 */
-	public function label();
+	public function label(): string;
 
 	/**
 	 * Conditional function to check what type of template this is.
@@ -52,7 +51,7 @@ interface Template {
 	 * @access public
 	 * @return bool
 	 */
-	public function isType( $type );
+	public function isType( $type ): bool;
 
 	/**
 	 * Conditional function to check if the template has a specific subtype.
@@ -61,7 +60,7 @@ interface Template {
 	 * @access public
 	 * @return bool
 	 */
-	public function hasSubtype( $subtype );
+	public function hasSubtype( $subtype ): bool;
 
 	/**
 	 * Conditional function to check if the template is for a post type.
@@ -70,5 +69,5 @@ interface Template {
 	 * @access public
 	 * @return bool
 	 */
-	public function forPostType( $type );
+	public function forPostType( $type ): bool;
 }

@@ -4,8 +4,106 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7486038b77868e375f337c8c9fb66197",
+    "content-hash": "454333bf1e6af62d87aa7333c4ff4134",
     "packages": [
+        {
+            "name": "benlumia007/backdrop",
+            "version": "v2.0.0.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/benlumia007/backdrop.git",
+                "reference": "6989f7021fa06efdb5004c3732d8b1b81c71d6d4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/benlumia007/backdrop/zipball/6989f7021fa06efdb5004c3732d8b1b81c71d6d4",
+                "reference": "6989f7021fa06efdb5004c3732d8b1b81c71d6d4",
+                "shasum": ""
+            },
+            "require": {
+                "benlumia007/backdrop-contracts": "^1.0.0",
+                "php": ">=8.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/functions-helpers.php"
+                ],
+                "psr-4": {
+                    "Backdrop\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Benjamin Lu",
+                    "email": "benlumia007@gmail.com",
+                    "homepage": "https://benjlu.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A core that helps you build amazing themes",
+            "homepage": "https://github.com/benlumia007/backdrop",
+            "keywords": [
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https://github.com/benlumia007/backdrop/issues",
+                "source": "https://github.com/benlumia007/backdrop/tree/v2.0.0"
+            },
+            "time": "2023-01-11T23:19:40+00:00"
+        },
+        {
+            "name": "benlumia007/backdrop-contracts",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/benlumia007/backdrop-contracts.git",
+                "reference": "eac919d47c6380f7006d9d3f47a01d8d239626eb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/benlumia007/backdrop-contracts/zipball/eac919d47c6380f7006d9d3f47a01d8d239626eb",
+                "reference": "eac919d47c6380f7006d9d3f47a01d8d239626eb",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Backdrop\\Contracts\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Benjamin Lu",
+                    "email": "benlumia007@gmail.com",
+                    "homepage": "https://benjlu.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Backdrop Contracts for Backdrop framework.",
+            "homepage": "https://github.com/benlumia007/backdrop-contracts",
+            "keywords": [
+                "classicpress",
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https://github.com/benlumia007/backdrop-contracts/issues",
+                "source": "https://github.com/benlumia007/backdrop-contracts/tree/1.0.0"
+            },
+            "time": "2023-01-05T06:42:52+00:00"
+        },
         {
             "name": "benlumia007/backdrop-template-helpers",
             "version": "1.0.0",
@@ -57,21 +155,22 @@
         },
         {
             "name": "benlumia007/backdrop-tools",
-            "version": "1.0.0",
+            "version": "v1.0.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/benlumia007/backdrop-tools.git",
-                "reference": "a3da78b2f8293b4bdd9b4225c8dc16203406a19d"
+                "reference": "cf1e76c5a4b92858e5959ea17534240449d56bd0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/benlumia007/backdrop-tools/zipball/a3da78b2f8293b4bdd9b4225c8dc16203406a19d",
-                "reference": "a3da78b2f8293b4bdd9b4225c8dc16203406a19d",
+                "url": "https://api.github.com/repos/benlumia007/backdrop-tools/zipball/cf1e76c5a4b92858e5959ea17534240449d56bd0",
+                "reference": "cf1e76c5a4b92858e5959ea17534240449d56bd0",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.4"
+                "php": ">=8.0"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -97,19 +196,22 @@
             ],
             "support": {
                 "issues": "https://github.com/benlumia007/backdrop-tools/issues",
-                "source": "https://github.com/benlumia007/backdrop-tools/tree/1.0.0"
+                "source": "https://github.com/benlumia007/backdrop-tools/tree/v1.0.0"
             },
-            "time": "2023-01-04T22:30:26+00:00"
+            "time": "2023-01-12T05:37:59+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "benlumia007/backdrop": 20,
+        "benlumia007/backdrop-tools": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.4"
+        "php": ">=8.0"
     },
     "platform-dev": [],
     "plugin-api-version": "2.3.0"

@@ -16,6 +16,7 @@
  * Define namespace
  */
 namespace Backdrop\Template\Manager;
+
 use Backdrop\Contracts\Bootable;
 
 /**

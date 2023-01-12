@@ -36,7 +36,7 @@ class Template implements TemplateContract {
 	 * @access protected
 	 * @var    string
 	 */
-	protected $type = 'post';
+	protected string $type = 'post';
 
 	/**
 	 * Array of subtypes template works with.
@@ -45,7 +45,7 @@ class Template implements TemplateContract {
 	 * @access protected
 	 * @var    array
 	 */
-	protected $subtype = [];
+	protected array $subtype = [];
 
 	/**
 	 * Filename of the template.
@@ -54,7 +54,7 @@ class Template implements TemplateContract {
 	 * @access protected
 	 * @var    string
 	 */
-	protected $filename = '';
+	protected string $filename = '';
 
 	/**
 	 * Internationalized text label.
@@ -63,7 +63,7 @@ class Template implements TemplateContract {
 	 * @access protected
 	 * @var    string
 	 */
-	protected $label = '';
+	protected string $label = '';
 
 	/**
 	 * Magic method to use in case someone tries to output the object as a
@@ -87,7 +87,7 @@ class Template implements TemplateContract {
 	 * @param  array   $args
 	 * @return void
 	 */
-	public function __construct( $filename, array $args = [] ) {
+	public function __construct( string $filename, array $args = [] ) {
 
 		foreach ( array_keys( get_object_vars( $this ) ) as $key ) {
 
@@ -111,7 +111,7 @@ class Template implements TemplateContract {
 	 * @access public
 	 * @return string
 	 */
-	public function filename() {
+	public function filename(): string {
 
 		return $this->filename;
 	}
@@ -123,7 +123,7 @@ class Template implements TemplateContract {
 	 * @access public
 	 * @return string
 	 */
-	public function label() {
+	public function label(): string {
 
 		return $this->label;
 	}
@@ -135,7 +135,7 @@ class Template implements TemplateContract {
 	 * @access public
 	 * @return bool
 	 */
-	public function isType( $type ) {
+	public function isType( $type ): bool {
 
 		return $type === $this->type;
 	}
@@ -147,7 +147,7 @@ class Template implements TemplateContract {
 	 * @access public
 	 * @return bool
 	 */
-	public function hasSubtype( $subtype ) {
+	public function hasSubtype( $subtype ): bool {
 
 		return ! $this->subtype || in_array( $subtype, (array) $this->subtype );
 	}
@@ -159,7 +159,7 @@ class Template implements TemplateContract {
 	 * @access public
 	 * @return bool
 	 */
-	public function forPostType( $type ) {
+	public function forPostType( $type ): bool {
 
 		return $this->isType( 'post' ) && $this->hasSubtype( $type );
 	}
