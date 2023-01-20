@@ -13,7 +13,7 @@
  */
 
 namespace Backdrop\Template\Manager;
-use Backdrop\Template\Manager\Component;
+
 use Backdrop\Core\ServiceProvider;
 
 /**
@@ -31,7 +31,7 @@ class Provider extends ServiceProvider {
 	 * @access public
 	 * @return void
 	 */
-	public function register(): void {
+	public function register() {
 
 		$this->app->singleton( Component::class );
 	}
@@ -43,7 +43,7 @@ class Provider extends ServiceProvider {
 	 * @access public
 	 * @return void
 	 */
-	public function boot() : void {
+	public function boot() {
 
 		$this->app->resolve( Component::class )->boot();
 	}

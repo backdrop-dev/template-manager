@@ -55,7 +55,7 @@ class Component implements Bootable {
 	 * @access public
 	 * @return void
 	 */
-	public function boot() : void {
+	public function boot() {
 
 		// Add registration callback.
 		add_action( 'init', [ $this, 'register' ], 95 );
@@ -95,7 +95,7 @@ class Component implements Bootable {
 	 * @param  string  $post_type
 	 * @return array
 	 */
-	public function postTemplates( $templates, $theme, $post, $post_type ) {
+	public function postTemplates( array $templates, $theme, $post, string $post_type ): array {
 
 		foreach ( $this->templates->all() as $template ) {
 
