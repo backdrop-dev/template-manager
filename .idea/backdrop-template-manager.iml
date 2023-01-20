@@ -6,8 +6,6 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" packagePrefix="Backdrop\Template\Manager\" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/benlumia007/backdrop-contracts" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/benlumia007/backdrop" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/benlumia007/backdrop-template-helpers" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/benlumia007/backdrop-tools" />
     </content>
