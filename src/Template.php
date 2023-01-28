@@ -17,7 +17,6 @@
  * Define namespace
  */
 namespace Backdrop\Template\Manager;
-use Backdrop\Template\Manager\Contracts\Template as TemplateContract;
 
 /**
  * Creates a new object template.
@@ -25,142 +24,142 @@ use Backdrop\Template\Manager\Contracts\Template as TemplateContract;
  * @since  1.0.0
  * @access public
  */
-class Template implements TemplateContract {
+class Template {
 
-	/**
-	 * Type of template. By default, we'll assume this is a post template,
-	 * but theme authors can extend this to term or user templates, for
-	 * example.
-	 *
-	 * @since  1.0.0
-	 * @access protected
-	 * @var    string
-	 */
-	protected $type = 'post';
+    /**
+     * Type of template. By default, we'll assume this is a post template,
+     * but theme authors can extend this to term or user templates, for
+     * example.
+     *
+     * @since  1.0.0
+     * @access protected
+     * @var    string
+     */
+    protected $type = 'post';
 
-	/**
-	 * Array of subtypes template works with.
-	 *
-	 * @since  1.0.0
-	 * @access protected
-	 * @var    array
-	 */
-	protected $subtype = [];
+    /**
+     * Array of subtypes template works with.
+     *
+     * @since  1.0.0
+     * @access protected
+     * @var    array
+     */
+    protected $subtype = [];
 
-	/**
-	 * Filename of the template.
-	 *
-	 * @since  1.0.0
-	 * @access protected
-	 * @var    string
-	 */
-	protected $filename = '';
+    /**
+     * Filename of the template.
+     *
+     * @since  1.0.0
+     * @access protected
+     * @var    string
+     */
+    protected $filename = '';
 
-	/**
-	 * Internationalized text label.
-	 *
-	 * @since  1.0.0
-	 * @access protected
-	 * @var    string
-	 */
-	protected $label = '';
+    /**
+     * Internationalized text label.
+     *
+     * @since  1.0.0
+     * @access protected
+     * @var    string
+     */
+    protected $label = '';
 
-	/**
-	 * Magic method to use in case someone tries to output the object as a
-	 * string. We'll just return the name.
-	 *
-	 * @since  1.0.0
-	 * @access public
-	 * @return string
-	 */
-	public function __toString() {
+    /**
+     * Magic method to use in case someone tries to output the object as a
+     * string. We'll just return the name.
+     *
+     * @since  1.0.0
+     * @access public
+     * @return string
+     */
+    public function __toString() {
 
-		return $this->filename();
-	}
+        return $this->filename();
+    }
 
-	/**
-	 * Register a new template object.
-	 *
-	 * @since  1.0.0
-	 * @access public
-	 * @param  string  $filename
-	 * @param  array   $args
-	 * @return void
-	 */
-	public function __construct( string $filename, array $args = [] ) {
+    /**
+     * Register a new template object.
+     *
+     * @since  1.0.0
+     * @access public
+     * @param  string  $filename
+     * @param  array   $args
+     * @return void
+     */
+    public function __construct( string $filename, array $args = [] ) {
 
-		foreach ( array_keys( get_object_vars( $this ) ) as $key ) {
+        foreach ( array_keys( get_object_vars( $this ) ) as $key ) {
 
-			if ( isset( $args[ $key ] ) ) {
-				$this->$key = $args[ $key ];
-			}
-		}
+            if ( isset( $args[ $key ] ) ) {
+                $this->$key = $args[ $key ];
+            }
+        }
 
-		// Allow `post_types` as an alias for `subtype`.
-		if ( isset( $args['post_types'] ) ) {
-			$this->subtype = (array) $args['post_types'];
-		}
+        // Allow `post_types` as an alias for `subtype`.
+        if ( isset( $args['post_types'] ) ) {
+            $this->subtype = (array) $args['post_types'];
+        }
 
-		$this->filename = $filename;
-	}
+        $this->filename = $filename;
+    }
 
-	/**
-	 * Returns the filename relative to the templates location.
-	 *
-	 * @since  1.0.0
-	 * @access public
-	 * @return string
-	 */
-	public function filename(): string {
+    /**
+     * Returns the filename relative to the templates location.
+     *
+     * @since  1.0.0
+     * @access public
+     * @return string
+     */
+    public function filename(): string {
 
-		return $this->filename;
-	}
+        return $this->filename;
+    }
 
-	/**
-	 * Returns the internationalized text label for the template.
-	 *
-	 * @since  1.0.0
-	 * @access public
-	 * @return string
-	 */
-	public function label(): string {
+    /**
+     * Returns the internationalized text label for the template.
+     *
+     * @since  1.0.0
+     * @access public
+     * @return string
+     */
+    public function label(): string {
 
-		return $this->label;
-	}
+        return $this->label;
+    }
 
-	/**
-	 * Conditional function to check what type of template this is.
-	 *
-	 * @since  1.0.0
-	 * @access public
-	 * @return bool
-	 */
-	public function isType( $type ): bool {
+    /**
+     * Conditional function to check what type of template this is.
+     *
+     * @since  1.0.0
+     * @access public
+     * @return bool
+     */
+    public function isType( $type ): bool {
 
-		return $type === $this->type;
-	}
+        return $type === $this->type;
+    }
 
-	/**
-	 * Conditional function to check if the template has a specific subtype.
-	 *
-	 * @since  1.0.0
-	 * @access public
-	 * @return bool
-	 */
-	public function hasSubtype( $subtype ): bool {
+    /**
+     * Conditional function to check if the template has a specific subtype.
+     *
+     * @since  1.0.0
+     * @access public
+     * @return bool
+     */
+    public function hasSubtype( $subtype ): bool {
 
-		return ! $this->subtype || in_array( $subtype, (array) $this->subtype );
-	}
+        return ! $this->subtype || in_array( $subtype, (array) $this->subtype );
+    }
 
-	/**
-	 * Conditional function to check if the template is for a post type.
-	 *
-	 * @since  1.0.0
-	 * @access public
-	 * @return bool
-	 */
-	public function forPostType( $type ): bool {
+    /**
+     * Conditional function to check if the template is for a post type.
+     *
+     * @since  1.0.0
+     * @access public
+     * @return bool
+     */
+    public function forPostType( $type ): bool {
 
-		return $this->isType( 'post' ) && $this->hasSubtype( $type );
-	}
+        return $this->isType( 'post' ) && $this->hasSubtype( $type );
+    }
 }

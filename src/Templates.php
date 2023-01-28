@@ -19,7 +19,6 @@
 namespace Backdrop\Template\Manager;
 
 use Backdrop\Tools\Collection;
-use function Backdrop\Template\Helpers\path;
 
 /**
  * Template collection class.
@@ -29,21 +28,17 @@ use function Backdrop\Template\Helpers\path;
  */
 class Templates extends Collection {
 
-	/**
-	 * Add a new custom template.
-	 *
-	 * @since  1.0.0
-	 * @access public
-	 * @param  string  $name
-	 * @param  mixed   $value
-	 * @return void
-	 */
-	 public function add( string $name, $value ) {
+    /**
+     * Add a new custom template.
+     *
+     * @since  1.0.0
+     * @access public
+     * @param  string  $name
+     * @param  mixed   $value
+     * @return void
+     */
+    public function add( string $name, $value ) {
 
-		$path = ltrim( trailingslashit( path( 'templates' ) ) );
-
-		$name = $path . $name;
-
-		parent::add( $name, new Template( $name, $value ) );
-	}
+        parent::add( $name, new Template( $name, $value ) );
+    }
 }
