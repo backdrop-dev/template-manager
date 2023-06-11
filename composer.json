@@ -1,6 +1,6 @@
 {
-    "name": "benlumia007/backdrop-template-manager",
-    "description": "A core that helps you build amazing themes",
+    "name": "backdrop-dev/template-manager",
+    "description": "Custom templates for registering custom post templates, it works for any object type (e.g., post, term, user, etc.), but does not add any UI elements of its own.",
     "keywords": [
         "wordpress"
     ],
@@ -21,8 +21,8 @@
     },
     "require": {
         "php": ">=7.1",
-        "benlumia007/backdrop": "^1.0",
-        "benlumia007/backdrop-template-helpers": "^1.0",
-        "benlumia007/backdrop-tools": "^1.0"
+        "backdrop-dev/framework": "^1.0",
+        "backdrop-dev/template-helpers": "^1.0",
+        "backdrop-dev/tools": "^1.0"
     }
 }
