@@ -55,7 +55,7 @@ class Component implements Bootable {
      * @access public
      * @return void
      */
-    public function boot() {
+    public function boot(): void {
 
         // Add registration callback.
         add_action( 'init', [ $this, 'register' ], 95 );
@@ -75,7 +75,7 @@ class Component implements Bootable {
      * @access public
      * @return void
      */
-    public function register() {
+    public function register(): void {
 
         do_action( 'backdrop/templates/register', $this->templates );
     }
