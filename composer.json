@@ -20,7 +20,6 @@
 		}
     },
     "require": {
-        "php": ">=7.1",
-        "backdrop-dev/tools": "^1.0"
+        "php": ">=7.1"
     }
 }
