@@ -9,7 +9,7 @@
  * @author    Benjamin Lu <benlumia007@gmail.com>
  * @copyright 2019-2023. Benjamin Lu
  * @license   https://www.gnu.org/licenses/gpl-2.0.html
- * @link      https://github.com/benlumia007/backdrop-template-manager
+ * @link      https://github.com/backdrop-dev/template-manager
  */
 
 namespace Backdrop\Template\Manager;
@@ -25,7 +25,7 @@ use Backdrop\Core\ServiceProvider;
 class Provider extends ServiceProvider {
 
 	/**
-	 * Registers the templates collection and manager.
+	 * Registers the templates collection and the manager.
 	 *
 	 * @since  1.0.0
 	 * @access public
@@ -33,6 +33,8 @@ class Provider extends ServiceProvider {
 	 */
 	public function register(): void {
 
+		// One shared collection, so other code can resolve it from the container.
+		$this->app->singleton( Templates::class );
 		$this->app->singleton( Component::class );
 	}
 

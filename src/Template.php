@@ -10,7 +10,7 @@
  * @author    Benjamin Lu <benlumia007@gmail.com>
  * @copyright 2019-2023. Benjamin Lu
  * @license   https://www.gnu.org/licenses/gpl-2.0.html
- * @link      https://github.com/benlumia007/backdrop-template-manager
+ * @link      https://github.com/backdrop-dev/template-manager
  */
 
 /**
@@ -72,7 +72,7 @@ class Template {
      * @access public
      * @return string
      */
-    public function __toString() {
+    public function __toString(): string {
 
         return $this->filename();
     }
@@ -134,7 +134,7 @@ class Template {
      * @access public
      * @return bool
      */
-    public function isType( $type ): bool {
+    public function isType( string $type ): bool {
 
         return $type === $this->type;
     }
@@ -146,9 +146,9 @@ class Template {
      * @access public
      * @return bool
      */
-    public function hasSubtype( $subtype ): bool {
+    public function hasSubtype( string $subtype ): bool {
 
-        return ! $this->subtype || in_array( $subtype, (array) $this->subtype );
+        return ! $this->subtype || in_array( $subtype, (array) $this->subtype, true );
     }
 
     /**
@@ -158,7 +158,7 @@ class Template {
      * @access public
      * @return bool
      */
-    public function forPostType( $type ): bool {
+    public function forPostType( string $type ): bool {
 
         return $this->isType( 'post' ) && $this->hasSubtype( $type );
     }
